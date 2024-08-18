@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #121212;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    background: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav .header-button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #e52e71, #ff8a00);
+    box-shadow: 0 4px 15px rgba(229, 46, 113, 0.5);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+nav .header-button:hover {
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    transform: scale(1.05);
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(18, 18, 18, -1.1), rgba(18, 18, 18, 0.8));
+    z-index: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+    z-index: 1;
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.button {
+    background: linear-gradient(90deg, #e52e71, #ff8a00);
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(229, 46, 113, 0.5);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    transform: scale(1.05);
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+.logoCover {
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: center; /* Выравнивание по горизонтали */
+}
+
+.logo {
+    margin-right: 10px; /* Отступ между текстом и изображением */
+}
+
+img {
+    height: 39px;
+}
+
+.icon {
+    height: 39px;
+    margin-right: 7px;    .logoCover {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logoCover {
+        display: flex;
+        align-items: center; /* Выравнивание по вертикали */
+        justify-content: center; /* Выравнивание по горизонтали */
+    }
+}
+
+.bottonIcon {
+    display: none;
+}
+
+/* Медиазапрос для планшетов и мобильных устройств */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    nav .header-button {
+        font-size: 0.9rem;
+        padding: 4px 10px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .button {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .flag {
+        margin-left: -5px;
+        height: 29px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .bottonIcon {
+        display: block;
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        height: 40px;
+    }
+}
+
+/* Медиазапрос для смартфонов */
+@media (max-width: 480px) {
+    header {
+        padding: 10px 15px;
+    }
+    
+    .logo {
+        margin-right: 0;
+        margin-bottom: 8px;
+        font-size: 1.2rem;
+    }
+
+    img, .icon {
+        height: 30px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+    }
+
+    .flag {
+        margin-left: 3px;
+        height: 26px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+
+}
+
